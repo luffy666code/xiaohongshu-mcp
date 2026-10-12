@@ -1,0 +1,37 @@
+{
+  "name": "xiaohongshu-mcp",
+  "version": "2.0.0",
+  "description": "小红书 MCP 服务（TypeScript 版）：复用本机浏览器，通过 stdio 提供 MCP 工具",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "xiaohongshu-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "node dist/index.js",
+    "smoke": "node scripts/smoke.mjs",
+    "doctor": "node dist/doctor.js",
+    "pack": "node scripts/pack.mjs",
+    "pack:slim": "node scripts/pack.mjs --slim",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "playwright-core": "^1.56.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.0"
+  }
+}

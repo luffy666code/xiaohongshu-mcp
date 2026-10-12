@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+
+# 登录态与运行时数据（含敏感信息）
+cookies.json
+*.local.json
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+.claude/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 发布打包产物
+release/
+*.zip
